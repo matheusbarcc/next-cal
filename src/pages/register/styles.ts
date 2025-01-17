@@ -14,7 +14,7 @@ export const Header = styled('div', {
   },
 
   [`> ${Text}`]: {
-    lineHeight: '$base',
+    color: '$gray200',
     marginBottom: '$6',
   },
 })
