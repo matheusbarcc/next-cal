@@ -61,7 +61,7 @@ export default function Register() {
   return (
     <Container>
       <Header>
-        <Heading as="strong">Bem-vindo ao Cal!</Heading>
+        <Heading as="strong">Bem-vindo ao Next Cal!</Heading>
         <Text>
           Precisamos de algumas informações para criar seu perfil! Ah, você pode
           editar essas informações depois.
