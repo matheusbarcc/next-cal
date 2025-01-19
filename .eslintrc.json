@@ -2,8 +2,5 @@
   "extends": [
     "@rocketseat/eslint-config/react",
     "next/core-web-vitals"
-  ],
-  "rules": {
-    "@typescript-eslint.io/rules/no-non-null-assertion": false
-  }
+  ]
 }
