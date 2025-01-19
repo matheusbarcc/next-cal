@@ -16,6 +16,8 @@ export default function ConnectCalendar() {
     await signIn('google')
   }
 
+  console.log(session)
+
   return (
     <Container>
       <Header>
