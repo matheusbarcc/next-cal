@@ -18,7 +18,7 @@ interface CalendarWeek {
   week: number
   days: Array<{
     date: dayjs.Dayjs
-    disabled?: boolean
+    disabled: boolean
   }>
 }
 
@@ -73,6 +73,10 @@ export function Calendar({ onDateSelected }: CalendarProps) {
   )
 
   const calendarWeeks = useMemo(() => {
+    if (!blockedDates) {
+      return []
+    }
+
     const daysInMonthArray = Array.from({
       length: currentDate.daysInMonth(),
     }).map((_, i) => {
