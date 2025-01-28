@@ -9,7 +9,7 @@ export function PrismaAdapter(
   res: NextApiResponse | NextPageContext['res'],
 ): Adapter {
   return {
-    async createUser(user) {
+    async createUser(user: { name: any; email: any; avatar_url: any }) {
       const { '@cal:userId': userIdInCookies } = parseCookies({ req })
 
       if (!userIdInCookies) {
@@ -131,7 +131,19 @@ export function PrismaAdapter(
       }
     },
 
-    async linkAccount(account) {
+    async linkAccount(account: {
+      userId: any
+      type: any
+      provider: any
+      providerAccountId: any
+      refresh_token: any
+      access_token: any
+      expires_at: any
+      token_type: any
+      scope: any
+      id_token: any
+      session_state: any
+    }) {
       await prisma.account.create({
         data: {
           user_id: account.userId,
