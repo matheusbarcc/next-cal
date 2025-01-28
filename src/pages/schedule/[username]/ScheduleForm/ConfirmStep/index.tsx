@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form'
 import dayjs from 'dayjs'
 import { api } from '../../../../../lib/axios'
 import { useRouter } from 'next/router'
+import { toast } from 'sonner'
 
 const confirmFormSchema = z.object({
   name: z.string().min(3, { message: 'O nome precisa no mínimo 3 caracteres' }),
@@ -39,12 +40,17 @@ export function ConfirmStep({
   async function handleConfirmScheduling(data: ConfirmFormData) {
     const { name, email, observations } = data
 
-    await api.post(`/users/${username}/schedule`, {
-      name,
-      email,
-      observations,
-      date: schedulingDate,
-    })
+    try {
+      await api.post(`/users/${username}/schedule`, {
+        name,
+        email,
+        observations,
+        date: schedulingDate,
+      })
+      toast.success('Agendamento criado com sucesso!')
+    } catch (err) {
+      toast.error('Falha ao criar agendamento!')
+    }
 
     onCancelConfirmation()
   }

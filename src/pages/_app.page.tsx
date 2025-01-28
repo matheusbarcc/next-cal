@@ -5,6 +5,7 @@ import { SessionProvider } from 'next-auth/react'
 import { globalStyles } from '../styles/global'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '../lib/react-query'
+import { Toaster } from 'sonner'
 
 globalStyles()
 
@@ -15,6 +16,7 @@ export default function App({
   return (
     <QueryClientProvider client={queryClient}>
       <SessionProvider session={session}>
+        <Toaster richColors />
         <Component {...pageProps} />
       </SessionProvider>
     </QueryClientProvider>
