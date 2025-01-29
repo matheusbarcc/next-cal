@@ -40,7 +40,7 @@ export function ClaimUsernameForm() {
       <Form as="form" onSubmit={handleSubmit(handleClaimUsername)}>
         <TextInput
           size="sm"
-          prefix="next-cal.com/"
+          prefix="nextcal.com/"
           placeholder="seu-usuario"
           {...register('username')}
         />
