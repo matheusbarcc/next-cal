@@ -2,6 +2,7 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)  
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://next-cal.vercel.app/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Next Cal is a scheduling web application that allows users to share their availability for meetings. Once a meeting is scheduled, it automatically creates an event in Google Calendar with a Google Meet link.
 
@@ -61,3 +62,6 @@ Try it here: **[Next Cal](https://next-cal.vercel.app/)**
    ```sh
    npm run dev
    ```
+
+### 📄 License
+This project is licensed under the [MIT License](LICENSE).
