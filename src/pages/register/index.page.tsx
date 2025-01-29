@@ -76,7 +76,7 @@ export default function Register() {
           <label>
             <Text size="sm">Nome de usuário</Text>
             <TextInput
-              prefix="cal.com/"
+              prefix="next-cal.com/"
               placeholder="seu-usuario"
               {...register('username')}
             />
