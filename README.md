@@ -45,7 +45,7 @@ Try it here: **[Next Cal](https://next-cal.vercel.app/)**
 
    ```env
    DATABASE_URL=your_database_url
-   DATABASE_DIRECT_URL=your_database_url (if nescessary)
+   DATABASE_DIRECT_URL=your_database_url (if necessary)
    GOOGLE_CLIENT_ID=your_google_client_id
    GOOGLE_CLIENT_SECRET=your_google_client_secret
    NEXTAUTH_SECRET=your_nextauth_secret
